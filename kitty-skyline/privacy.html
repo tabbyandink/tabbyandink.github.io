@@ -70,8 +70,8 @@
   <h2><span class="n">7</span>Analytics and crash reports (Google Firebase)</h2>
   <p>To understand which levels are too hard and to fix crashes, the Game uses Google Firebase Analytics and Firebase Crashlytics, provided by Google LLC as our processor.</p>
   <ul>
-    <li><strong>Analytics</strong> collects gameplay events (city, level, result, stars, Endless score), the product ID of a completed purchase, whether a rewarded ad was watched, plus a random app instance ID, device model, Android version, country and session statistics. It does not collect your name, e-mail or advertising ID, and it is not used for advertising.</li>
-    <li><strong>Crashlytics</strong> sends a report when the Game crashes or hits an error: what went wrong in the code, device model, Android version, free memory and a random installation ID.</li>
+    <li><strong>Analytics</strong> collects gameplay events (city, level, result, stars, Endless score), the product ID, price and currency of a completed purchase, whether a rewarded ad was watched, plus a random app instance ID, device model, Android version, approximate location (country and city, derived from your IP address) and session statistics. It does not collect your name, e-mail or advertising ID, and it is not used for advertising.</li>
+    <li><strong>Crashlytics</strong> sends a report when the Game crashes or hits an error: what went wrong in the code, the last city and level you opened, device model, Android version, free memory, session information and a random installation ID.</li>
     <li>In the EU/EEA, the UK and Switzerland analytics runs only if you allow it in Google's consent form; you can change this any time in <strong>Settings → Ad settings</strong>. Crash reports are always sent, because they are needed to keep the Game working.</li>
     <li>Analytics data is kept for at most 14 months, crash reports for about 90 days.</li>
     <li>More: <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a> and <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>. To ask us to delete this data, write to <a href="mailto:tabbyandink@gmail.com">tabbyandink@gmail.com</a>.</li>
@@ -82,7 +82,7 @@
     <li>No accounts of our own, no chat, no contact with other players.</li>
     <li>No tracking across other apps and websites, and analytics is never used to target ads.</li>
     <li>We do not sell any data.</li>
-    <li>Permissions: internet access, network state, vibration, the advertising ID and billing permissions used by Google's ads and purchase libraries, and the install referrer used by Firebase. Nothing else.</li>
+    <li>Permissions: internet access, network state, vibration, the advertising ID and billing permissions used by Google's ads and purchase libraries, the install referrer used by Firebase, and the wake lock, foreground service and basic phone state permissions these Google libraries need to work in the background. None of them asks you for anything, and the Game requests no other permissions.</li>
   </ul>
 
   <h2><span class="n">9</span>Children</h2>
@@ -143,8 +143,8 @@
   <h2><span class="n">7</span>Аналітика та звіти про збої (Google Firebase)</h2>
   <p>Щоб розуміти, які рівні заскладні, і виправляти збої, гра використовує Google Firebase Analytics і Firebase Crashlytics. Їх надає Google LLC як обробник даних для нас.</p>
   <ul>
-    <li><strong>Аналітика</strong> збирає події гри (місто, рівень, результат, зірки, рекорд у нескінченному режимі), ідентифікатор купленого товару, чи було переглянуто рекламу за винагороду, а також випадковий ідентифікатор застосунку, модель пристрою, версію Android, країну та статистику сесій. Вона не збирає ваше ім'я, пошту чи рекламний ідентифікатор і не використовується для реклами.</li>
-    <li><strong>Crashlytics</strong> надсилає звіт, коли гра аварійно закривається чи натрапляє на помилку: що саме сталося в коді, модель пристрою, версію Android, вільну пам'ять і випадковий ідентифікатор встановлення.</li>
+    <li><strong>Аналітика</strong> збирає події гри (місто, рівень, результат, зірки, рекорд у нескінченному режимі), ідентифікатор, ціну й валюту купленого товару, чи було переглянуто рекламу за винагороду, а також випадковий ідентифікатор застосунку, модель пристрою, версію Android, приблизне місцезнаходження (країна й місто за IP-адресою) та статистику сесій. Вона не збирає ваше ім'я, пошту чи рекламний ідентифікатор і не використовується для реклами.</li>
+    <li><strong>Crashlytics</strong> надсилає звіт, коли гра аварійно закривається чи натрапляє на помилку: що саме сталося в коді, останнє відкрите місто й рівень, модель пристрою, версію Android, вільну пам'ять, дані про сесію і випадковий ідентифікатор встановлення.</li>
     <li>У ЄС/ЄЕЗ, Великій Британії та Швейцарії аналітика працює лише якщо ви дозволили це у формі згоди Google; змінити вибір можна будь-коли в <strong>Налаштування → Налаштування реклами</strong>. Звіти про збої надсилаються завжди, бо без них гру не вийде підтримувати.</li>
     <li>Дані аналітики зберігаються не довше 14 місяців, звіти про збої приблизно 90 днів.</li>
     <li>Докладніше: <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a> і <a href="https://policies.google.com/privacy?hl=uk">policies.google.com/privacy</a>. Щоб попросити видалити ці дані, напишіть на <a href="mailto:tabbyandink@gmail.com">tabbyandink@gmail.com</a>.</li>
@@ -155,7 +155,7 @@
     <li>Немає власних акаунтів, чату й спілкування з іншими гравцями.</li>
     <li>Немає стеження за вами в інших застосунках і на сайтах, а аналітика ніколи не використовується для реклами.</li>
     <li>Ми не продаємо жодних даних.</li>
-    <li>Дозволи: доступ до інтернету, стан мережі, вібрація, а також рекламний ідентифікатор і дозвіл на покупки, які використовують бібліотеки реклами та покупок Google, а також джерело встановлення (install referrer) для Firebase. Більше нічого.</li>
+    <li>Дозволи: доступ до інтернету, стан мережі, вібрація, а також рекламний ідентифікатор і дозвіл на покупки, які використовують бібліотеки реклами та покупок Google, джерело встановлення (install referrer) для Firebase, а також дозволи на роботу у фоні та базовий стан телефона, потрібні цим бібліотекам Google. Жоден із них нічого у вас не питає, інших дозволів гра не просить.</li>
   </ul>
 
   <h2><span class="n">9</span>Діти</h2>
