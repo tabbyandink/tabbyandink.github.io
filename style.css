@@ -108,3 +108,5 @@ footer a { font-weight: 800; }
   .doc { padding: 22px 18px 28px; border-radius: 20px; }
   .doc h1 { font-size: 27px; }
 }
+
+.game + .game { margin-top: 28px; }
